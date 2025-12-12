@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Login - TravelVista</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<header>
+<h1>TravelVista</h1>
+<nav>
+<a href="index.html">Home</a>
+<a href="login.html">Login</a>
+<a href="about.html">About</a>
+<a href="contact.html">Contact</a>
+</nav>
+</header>
+<section class="hero">
+<h2>Login to Your Account</h2>
+<p>Access your travel bookings and personalized deals.</p>
+<form onsubmit="login(); return false;">
+<label>Email:
+  <input id="user" type="email" placeholder="Enter your email" required>
+</label>
+<label>Password:
+  <input id="pass" type="password" placeholder="Enter your password" required>
+</label>
+<p id="msg" style="color:red; font-weight:bold;"></p>
+<button type="submit">Login</button>
+</form>
+</section>
+<script src="script.js"></script>
+</body>
+</html>
