@@ -2,16 +2,20 @@ function login() {
     let u = document.getElementById("user").value;
     let p = document.getElementById("pass").value;
     let msg = document.getElementById("msg");
-    if (p.length < 6) {
-        msg.innerText = "Password must be at least 6 characters";
+
+    let emailPattern = /^[a-zA-Z]+@gmail\.com$/;
+
+    if (p.length <= 6) {
+        msg.innerText = "Password must be more than 6 characters";
         msg.style.color = "red";
         return;
     }
-    if (u === "shourya@gmail.com" && p === "123456") {
+
+    if (emailPattern.test(u)) {
         msg.innerText = "Login Success";
         msg.style.color = "green";
     } else {
-        msg.innerText = "Wrong Credentials";
+        msg.innerText = "Invalid Email Format";
         msg.style.color = "red";
     }
 }
